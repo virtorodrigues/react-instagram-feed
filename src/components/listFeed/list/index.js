@@ -1,11 +1,11 @@
 import React from 'react'
-import './style.css'
 import Item from '../item'
+import './style.css'
 
 export default function List({ items }) {
     return(
         <div className="list-container">
-            { items.map((item) => <Item item={item} />) }
+            { items.map((item, index) => <Item key={index} item={item} />) }
         </div>
     )
 }
